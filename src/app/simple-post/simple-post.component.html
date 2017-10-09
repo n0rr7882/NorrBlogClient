@@ -1,0 +1,15 @@
+<md-card class="example-card">
+  <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+
+  <md-card-content>
+    <md-card-title>{{post.title}}</md-card-title>
+    <md-card-subtitle>{{post.userId}} | {{post.creationDate.getFullYear()}}/{{post.creationDate.getMonth()+1}}/{{post.creationDate.getDate()}}
+      {{post.creationDate.getHours()}}:{{post.creationDate.getMinutes()}} | {{post.category}}</md-card-subtitle>
+    <p> {{post.content.substring(0, 150) + '...' }} </p>
+  </md-card-content>
+  <md-card-actions>
+    <a md-button [routerLink]="['/article']" [queryParams]="{ id: post.id }">자세히보기</a>
+    <button md-button disabled style="float:right"><md-icon>remove_red_eye</md-icon> {{post.views}}</button>
+    <button md-button disabled style="float:right"><md-icon>comment</md-icon> {{post.numOfComments}}</button>
+  </md-card-actions>
+</md-card>

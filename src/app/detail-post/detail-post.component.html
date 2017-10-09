@@ -1,0 +1,15 @@
+<md-card class="example-card">
+  <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+  <md-card-title>{{post.title}}</md-card-title>
+  <md-card-subtitle>{{post.userId}} | {{post.creationDate.getFullYear()}}/{{post.creationDate.getMonth()+1}}/{{post.creationDate.getDate()}}
+    {{post.creationDate.getHours()}}:{{post.creationDate.getMinutes()}} | {{post.category}}</md-card-subtitle>
+  <hr>
+  <md-card-content>
+    <article [innerHTML]="post.content"></article>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button [routerLink]="['/posts']"><md-icon>keyboard_arrow_left</md-icon>포스트 목록</button>
+    <button md-button disabled style="float:right"><md-icon>remove_red_eye</md-icon> {{post.views}}</button>
+    <button md-button disabled style="float:right"><md-icon>comment</md-icon> {{post.numOfComments}}</button>
+  </md-card-actions>
+</md-card>

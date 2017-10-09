@@ -1,0 +1,193 @@
+md-card {
+    margin: 10px;
+}
+
+/* markdown-rendered html theme */
+::ng-deep article {
+    /* color: #444; */
+    font-family: 'Segoe WPC', 'Segoe UI', SFUIText-Light, HelveticaNeue-Light, sans-serif;
+    font-size: 1rem;
+    line-height: 1.4;
+} 
+::ng-deep article a {
+    color: #007acc;
+    text-decoration: none;
+}
+::ng-deep article a:visited {
+    color: #007acc;
+}
+::ng-deep article a:hover {
+    color: #007acc;
+}
+::ng-deep article a:hover,
+::ng-deep article a:active {
+    text-decoration: underline;
+}
+::ng-deep article p {
+    margin: 0;
+}
+::ng-deep article p:not(:first-child) {
+    margin-top: 1rem;
+}
+::ng-deep article h1,
+::ng-deep article h2,
+::ng-deep article h3,
+::ng-deep article h4,
+::ng-deep article h5,
+::ng-deep article h6 {
+    font-weight: normal;
+    color: #eee;
+    line-height: 1.2;
+    margin: 1em 0 0.6em;
+}
+::ng-deep article h1:first-child,
+::ng-deep article h2:first-child,
+::ng-deep article h3:first-child,
+::ng-deep article h4:first-child,
+::ng-deep article h5:first-child,
+::ng-deep article h6:first-child {
+    margin-top: 0;
+}
+::ng-deep article h4,
+::ng-deep article h5,
+::ng-deep article h6 {
+    font-weight: bold;
+    color: #bbb;
+}
+::ng-deep article h1 {
+    font-size: 2.5rem;
+}
+::ng-deep article h2 {
+    font-size: 2rem;
+}
+::ng-deep article h3 {
+    font-size: 1.5rem;
+}
+::ng-deep article h4 {
+    font-size: 1.2rem;
+}
+::ng-deep article h5 {
+    font-size: 1.1rem;
+}
+::ng-deep article h6 {
+    font-size: 0.9rem;
+}
+::ng-deep article blockquote {
+    margin: 0 0 0 0.25rem;
+    padding-left: 0.65rem;
+    border-left: 0.25rem solid #007acc;
+    background: rgba(127, 127, 127, 0.1);
+}
+::ng-deep article blockquote:not(:first-child) {
+    margin-top: 1rem;
+}
+::ng-deep article hr {
+    display: block;
+    border: 0;
+    height: 2px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.18);
+    margin: 0;
+}
+::ng-deep article hr:not(:first-child) {
+    margin-top: 1rem;
+}
+::ng-deep article b,
+::ng-deep article strong {
+    font-weight: bold;
+}
+::ng-deep article i,
+::ng-deep article em {
+    font-style: italic;
+}
+::ng-deep article s,
+::ng-deep article del {
+    text-decoration: line-through;
+}
+::ng-deep article sub,
+::ng-deep article sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+::ng-deep article sup {
+    top: -0.5rem;
+}
+::ng-deep article sub {
+    bottom: -0.25rem;
+}
+::ng-deep article ul,
+::ng-deep article ol {
+    padding: 0 0 0 2rem;
+    margin: 0;
+}
+::ng-deep article ul:not(:first-child),
+::ng-deep article ol:not(:first-child) {
+    margin-top: 1rem;
+}
+::ng-deep article img {
+    border: 0;
+    max-width: 100%;
+    display: block;
+    max-height: 50vh;
+}
+::ng-deep article table {
+    border-collapse: collapse;
+}
+::ng-deep article table:not(:first-child) {
+    margin-top: 1rem;
+}
+::ng-deep article table > thead {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+::ng-deep article table > thead > tr > th {
+    text-align: left;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.69);
+}
+::ng-deep article table > thead > tr > th,
+::ng-deep article table > thead > tr > td,
+::ng-deep article table > tbody > tr > th,
+::ng-deep article table > tbody > tr > td {
+    padding: 0.25rem 0.5rem;
+}
+::ng-deep article table > tbody > tr + tr > td {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+}
+::ng-deep article code {
+    color: #fff;
+    font-family: Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace;
+    background: rgba(127, 127, 127, 0.1);
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+}
+::ng-deep article pre {
+    white-space: pre;
+    margin: 0;
+}
+::ng-deep article pre:not(:first-child) {
+    margin-top: 1rem;
+}
+::ng-deep article pre > code {
+    font-family: Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace;
+    background: rgba(127, 127, 127, 0.05);
+    display: block;
+    padding: 0.65rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+    overflow: auto;
+}
+
+/* syntax highlighting */
+::ng-deep .hljs{display:block;overflow-x:auto;padding:0.5em;color:#abb2bf;background:#282c34}
+::ng-deep .hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}
+::ng-deep .hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}
+::ng-deep .hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}
+::ng-deep .hljs-literal{color:#56b6c2}
+::ng-deep .hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}
+::ng-deep .hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}
+::ng-deep .hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}
+::ng-deep .hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}
+::ng-deep .hljs-emphasis{font-style:italic}
+::ng-deep .hljs-strong{font-weight:bold}
+::ng-deep .hljs-link{text-decoration:underline}

@@ -1,0 +1,59 @@
+<form (submit)="signup()">
+  <md-expansion-panel [expanded]="isSignupPanelOpen" (opened)="open()" (closed)="close()">
+    <md-expansion-panel-header>
+      <md-panel-title>
+        회원가입
+      </md-panel-title>
+    </md-expansion-panel-header>
+
+    <md-form-field>
+      <input mdInput placeholder="아이디" [formControl]="idForm">
+      <md-error *ngIf="idForm.hasError('pattern')">
+        ID는 6글자 이상의 영문자 + 숫자 입니다.
+      </md-error>
+      <md-error *ngIf="idForm.hasError('required')">
+        <strong>아이디</strong>를 입력해주세요.
+      </md-error>
+    </md-form-field>
+
+    <md-form-field>
+      <input mdInput placeholder="이름" [formControl]="nameForm">
+      <md-error *ngIf="nameForm.hasError('pattern')">
+        이름은 공백없이 15글자 미만이어야 합니다.
+      </md-error>
+      <md-error *ngIf="nameForm.hasError('required')">
+        <strong>이름</strong>을 입력해주세요.
+      </md-error>
+    </md-form-field>
+
+    <md-form-field>
+      <input mdInput placeholder="Email" [formControl]="emailForm">
+      <md-error *ngIf="emailForm.hasError('pattern')">
+        Email 형식에 일치하지 않습니다.
+      </md-error>
+      <md-error *ngIf="emailForm.hasError('required')">
+        <strong>Email</strong>을 입력해주세요.
+      </md-error>
+    </md-form-field>
+
+    <md-form-field>
+      <input type="password" mdInput placeholder="암호" [formControl]="pwForm">
+      <md-error *ngIf="pwForm.hasError('pattern')">
+        암호는 8글자 이상의 영문자 + 숫자 + 기호 입니다.
+      </md-error>
+      <md-error *ngIf="pwForm.hasError('required')">
+        <strong>암호</strong>를 입력해주세요.
+      </md-error>
+    </md-form-field>
+
+    <md-form-field>
+      <input type="password" mdInput placeholder="암호 재입력" [(ngModel)]="passwordAgain" [formControl]="pwForm">
+      <md-error *ngIf="pwForm.hasError('required')">
+        <strong>암호</strong>를 다시 입력해주세요.
+      </md-error>
+    </md-form-field>
+    <md-action-row>
+      <button type="submit" md-button color="primary">회원가입</button>
+    </md-action-row>
+  </md-expansion-panel>
+</form>

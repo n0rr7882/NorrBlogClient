@@ -1,0 +1,21 @@
+<form (submit)="login()">
+  <md-expansion-panel>
+    <md-expansion-panel-header>
+      <md-panel-title>
+        로그인
+      </md-panel-title>
+    </md-expansion-panel-header>
+
+    <md-form-field>
+      <input mdInput placeholder="아이디" [formControl]="idForm">
+    </md-form-field>
+
+    <md-form-field>
+      <input type="password" mdInput placeholder="암호" [formControl]="pwForm">
+    </md-form-field>
+
+    <md-action-row>
+      <button type="submit" md-button color="primary">로그인</button>
+    </md-action-row>
+  </md-expansion-panel>
+</form>

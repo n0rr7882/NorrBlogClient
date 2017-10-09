@@ -1,0 +1,24 @@
+<div class="comments-wrapper">
+  <!-- comment input -->
+  <md-card-content>
+    <form class="comment-field">
+      <md-form-field>
+        <input #comment mdInput placeholder="코멘트 추가..." maxlength="256">
+        <md-hint align="start"><strong>음담패설은 예고 없이 삭제될 수 있습니다.</strong></md-hint>
+        <md-hint align="end">{{comment.value.length}} / 256</md-hint>
+      </md-form-field>
+      <button type="submit" md-button color="accent">작성 완료</button>
+    </form>
+  </md-card-content>
+
+  <md-card-title>10개의 코멘트</md-card-title>
+  <!-- comment list -->
+  <div class="comment" *ngFor="let i of [1,2,3,4,5]">
+    <md-card-header>
+      <div md-card-avatar class="profile-image"></div>
+      <md-card-title>YourID</md-card-title>
+      <md-card-subtitle>2017/7/12 12:23</md-card-subtitle>
+    </md-card-header>
+    <md-card-content>로오오오오 취향적띠 오키라 ㅁ;ㄴㄹㅇ ㅓㅁㄷ;ㅍ</md-card-content>
+  </div>
+</div>

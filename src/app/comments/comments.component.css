@@ -1,0 +1,20 @@
+.comments-wrapper {
+    margin: 10px;
+    padding: 10px;
+}
+
+.comment-field {
+    width: 100%;
+}
+
+.comment-field>md-form-field {
+    width: calc(100% - 100px);
+}
+
+.comment-field>button {
+    width: 95px;
+}
+
+.comment {
+    padding-top: 50px;
+}
