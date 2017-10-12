@@ -4,4 +4,5 @@ input, md-form-field {
 
 md-expansion-panel {
     margin: 10px;
+    box-shadow: none !important;
 }

@@ -1,14 +1,14 @@
 <md-card>
   <md-card-header>
-    <div md-card-avatar class="profile-image"></div>
-    <md-card-title>{{loginUser.name}}</md-card-title>
-    <md-card-subtitle>{{loginUser.id}}</md-card-subtitle>
+    <div md-card-avatar class="profile-image" [ngStyle]="{'background-image':'url('+apiUrl+'/users/'+authService.loginedUser.id+'/profile-image.jpg)'}"></div>
+    <md-card-title>{{authService.loginedUser.name}}</md-card-title>
+    <md-card-subtitle>{{authService.loginedUser.id}}</md-card-subtitle>
   </md-card-header>
   <md-card-content>
-    <p>{{loginUser.email}}</p>
+    <p>{{authService.loginedUser.email}}</p>
   </md-card-content>
   <md-card-actions>
     <button md-button color="primary" (click)="authService.logout()">로그아웃</button>
-    <button md-button>계정정보</button>
+    <a md-button [routerLink]="['/me']">계정정보</a>
   </md-card-actions>
 </md-card>

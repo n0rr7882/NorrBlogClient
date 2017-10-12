@@ -5,7 +5,7 @@
         <md-icon>menu</md-icon>
       </button>
     </span>
-  <span>N0rR's "Hello, world!"</span>
+  <span>???</span>
 
   <span style="flex: 1 1 auto"></span>
 
@@ -14,8 +14,8 @@
       <md-icon>more_vert</md-icon>
     </button>
     <md-menu #menu="mdMenu">
-      <button md-menu-item>홈으로</button>
-      <button md-menu-item>작성하기</button>
+      <button md-menu-item [routerLink]="['/posts']">홈으로</button>
+      <button md-menu-item [routerLink]="['/write']">작성하기</button>
     </md-menu>
   </span>
 </md-toolbar>
@@ -23,8 +23,8 @@
 <md-sidenav-container>
 
   <!-- sidenav -->
-  <md-sidenav #sidenav style="width: 300px">
-    <md-toolbar color="accent">
+  <md-sidenav #sidenav style="width:300px">
+    <md-toolbar>
       <span>계정</span>
     </md-toolbar>
 
@@ -41,7 +41,7 @@
       <app-login-info></app-login-info>
     </div>
 
-    <md-toolbar color="accent">
+    <md-toolbar>
       <span>카테고리</span>
     </md-toolbar>
 
@@ -50,13 +50,13 @@
       <a md-list-item *ngFor="let category of categories"> {{ category.category }} </a>
     </md-nav-list>
   </md-sidenav>
-
-  <router-outlet></router-outlet>
-
+  <div class="contents">
+    <router-outlet></router-outlet>
+  </div>
   <!-- footer  -->
-  <md-toolbar color="accent">
+  <md-toolbar>
     <span style="flex: 1 1 auto"></span>
-    <span>norr.kr &copy; 2017 all rights revered.</span>
+    <span>norr.kr &copy; 2017 all rights reversed.</span>
     <span style="flex: 1 1 auto"></span>
   </md-toolbar>
 

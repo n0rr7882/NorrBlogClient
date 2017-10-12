@@ -30,13 +30,8 @@ export class ArticleComponent implements OnInit {
     if (this.postId) {
       this.postService
         .getPost(this.postId)
-        .then(post => {
-          console.log(post);
-          this.post = new Post(post);
-        })
-        .catch(err => {
-          this.location.back();
-        });
+        .then(post => this.post = new Post(post))
+        .catch(err => this.location.back());
     } else {
       this.location.back();
     }

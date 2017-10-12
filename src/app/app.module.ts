@@ -16,7 +16,11 @@ import {
   MatCardModule,
   MatExpansionModule,
   MatSnackBarModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatTabsModule,
+  MatTableModule,
+  MatChipsModule
 } from '@angular/material';
 
 import { CookieService } from 'angular2-cookie/services/cookies.service';
@@ -39,6 +43,8 @@ import { SimplePostListComponent } from './simple-post-list/simple-post-list.com
 import { DetailPostComponent } from './detail-post/detail-post.component';
 import { ArticleComponent } from './article/article.component';
 import { CommentsComponent } from './comments/comments.component';
+import { MyInfoComponent } from './my-info/my-info.component';
+import { AccountInfoComponent } from './account-info/account-info.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +56,9 @@ import { CommentsComponent } from './comments/comments.component';
     SimplePostListComponent,
     DetailPostComponent,
     ArticleComponent,
-    CommentsComponent
+    CommentsComponent,
+    MyInfoComponent,
+    AccountInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -70,11 +78,16 @@ import { CommentsComponent } from './comments/comments.component';
     MatExpansionModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatTableModule,
+    MatChipsModule,
 
     RouterModule.forRoot([
       { path: '', redirectTo: 'posts', pathMatch: 'full' },
       { path: 'posts', component: SimplePostListComponent },
       { path: 'article', component: ArticleComponent },
+      { path: 'me', component: MyInfoComponent },
       { path: '**', redirectTo: 'posts' }
     ])
   ],
@@ -89,7 +102,11 @@ import { CommentsComponent } from './comments/comments.component';
     MatCardModule,
     MatExpansionModule,
     MatSnackBarModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
+    MatTabsModule,
+    MatTableModule,
+    MatChipsModule
   ],
   providers: [
     AuthService,

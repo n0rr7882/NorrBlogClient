@@ -29,12 +29,12 @@ import {
   CommentsResponse
 } from './blog.interface';
 
-export const API_URL = 'your_api_server_url';
+export const API_URL = 'http://localhost:3000';
 
 @Injectable()
 export class AuthService {
 
-  private loginedUser: User = undefined;
+  private _loginedUser: User = undefined;
 
   constructor(
     private http: HttpClient,
@@ -42,8 +42,8 @@ export class AuthService {
     private cookieService: CookieService
   ) {
     this.getMe()
-      .then(user => this.loginedUser = new User(user))
-      .catch(err => this.loginedUser = undefined);
+      .then(user => this._loginedUser = new User(user))
+      .catch(err => this._loginedUser = undefined);
   }
 
   // login user
@@ -53,7 +53,7 @@ export class AuthService {
       .post<LoginResponse>(`${API_URL}/sign/login`, { "id": id, "pw": pw })
       .toPromise()
       .then(res => {
-        this.loginedUser = new User(res.user);
+        this._loginedUser = new User(res.user);
         this.cookieService.put('ene', res.token);
         this.snackBar.open('로그인에 성공하였습니다.', 'close', { duration: 3000 });
         return true;
@@ -66,13 +66,13 @@ export class AuthService {
   }
 
   public logout(): void {
-    this.loginedUser = undefined;
+    this._loginedUser = undefined;
     this.cookieService.remove('ene');
     this.snackBar.open('성공적으로 로그아웃하였습니다.', 'close', { duration: 3000 });
   }
 
   public isLogin(): boolean {
-    if (this.loginedUser) return true;
+    if (this._loginedUser) return true;
     else return false;
   }
 
@@ -90,6 +90,10 @@ export class AuthService {
         this.cookieService.remove('ene');
         return null;
       });
+  }
+
+  public get loginedUser(): User {
+    return this._loginedUser;
   }
 
 }

@@ -1,0 +1,48 @@
+<form>
+  <md-card class="example-card">
+    <img md-card-image src="{{apiUrl}}/users/{{user.id}}/profile-image.jpg">
+    <md-chip-list>
+      <md-chip *ngIf="user.isAdmin" color="primary" selected="true">관리자 계정</md-chip>
+      <md-chip *ngIf="(!user.isAdmin && !user.isDenied)" color="accent">일반 계정</md-chip>
+      <md-chip *ngIf="user.isDenied" color="warn">정지 계정</md-chip>
+    </md-chip-list>
+    <md-card-content>
+      <md-card-title>{{user.name}} ({{user.id}})</md-card-title>
+      <md-card-subtitle>{{user.email}}</md-card-subtitle>
+
+      <form>
+        <md-expansion-panel>
+          <md-expansion-panel-header>
+            <md-panel-title>
+              정보 수정
+            </md-panel-title>
+          </md-expansion-panel-header>
+
+          <md-form-field>
+            <input mdInput placeholder="이름" value="{{user.name}}">
+          </md-form-field>
+
+          <md-form-field>
+            <input mdInput placeholder="Email" value="{{user.email}}">
+          </md-form-field>
+
+          <md-form-field>
+            <input type="password" mdInput placeholder="암호">
+          </md-form-field>
+
+          <md-form-field>
+            <input type="password" mdInput placeholder="암호 재입력">
+          </md-form-field>
+          <md-action-row>
+            <button type="submit" md-button color="primary">정보 업데이트</button>
+          </md-action-row>
+        </md-expansion-panel>
+      </form>
+    </md-card-content>
+    <md-card-actions>
+      <button *ngIf="user.isDenied" md-button color="accent">계정 정지 해제 요청</button>
+      <button *ngIf="(!user.isAdmin && !user.isDenied)" md-button color="accent">관리자 권한 요청</button>
+      <button md-button color="warn">계정 삭제</button>
+    </md-card-actions>
+  </md-card>
+</form>

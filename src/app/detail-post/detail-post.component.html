@@ -1,5 +1,5 @@
 <md-card class="example-card">
-  <img md-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+  <img md-card-image src="{{apiUrl}}/posts/{{post.id}}/preview-image.jpg">
   <md-card-title>{{post.title}}</md-card-title>
   <md-card-subtitle>{{post.userId}} | {{post.creationDate.getFullYear()}}/{{post.creationDate.getMonth()+1}}/{{post.creationDate.getDate()}}
     {{post.creationDate.getHours()}}:{{post.creationDate.getMinutes()}} | {{post.category}}</md-card-subtitle>

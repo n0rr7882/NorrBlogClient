@@ -36,7 +36,7 @@ md-card {
 ::ng-deep article h5,
 ::ng-deep article h6 {
     font-weight: normal;
-    color: #eee;
+    color: #111;
     line-height: 1.2;
     margin: 1em 0 0.6em;
 }
@@ -52,7 +52,7 @@ md-card {
 ::ng-deep article h5,
 ::ng-deep article h6 {
     font-weight: bold;
-    color: #bbb;
+    color: #444;
 }
 ::ng-deep article h1 {
     font-size: 2.5rem;
@@ -144,7 +144,7 @@ md-card {
 }
 ::ng-deep article table > thead > tr > th {
     text-align: left;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.69);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.69);
 }
 ::ng-deep article table > thead > tr > th,
 ::ng-deep article table > thead > tr > td,
@@ -153,10 +153,10 @@ md-card {
     padding: 0.25rem 0.5rem;
 }
 ::ng-deep article table > tbody > tr + tr > td {
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    border-top: 1px solid rgba(0, 0, 0, 0.18);
 }
 ::ng-deep article code {
-    color: #fff;
+    color: #000;
     font-family: Menlo, Monaco, Consolas, 'Droid Sans Mono', 'Courier New', monospace;
     background: rgba(127, 127, 127, 0.1);
     padding: 0 0.25rem;
@@ -179,15 +179,68 @@ md-card {
 }
 
 /* syntax highlighting */
-::ng-deep .hljs{display:block;overflow-x:auto;padding:0.5em;color:#abb2bf;background:#282c34}
-::ng-deep .hljs-comment,.hljs-quote{color:#5c6370;font-style:italic}
-::ng-deep .hljs-doctag,.hljs-keyword,.hljs-formula{color:#c678dd}
-::ng-deep .hljs-section,.hljs-name,.hljs-selector-tag,.hljs-deletion,.hljs-subst{color:#e06c75}
-::ng-deep .hljs-literal{color:#56b6c2}
-::ng-deep .hljs-string,.hljs-regexp,.hljs-addition,.hljs-attribute,.hljs-meta-string{color:#98c379}
-::ng-deep .hljs-built_in,.hljs-class .hljs-title{color:#e6c07b}
-::ng-deep .hljs-attr,.hljs-variable,.hljs-template-variable,.hljs-type,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo,.hljs-number{color:#d19a66}
-::ng-deep .hljs-symbol,.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-title{color:#61aeee}
-::ng-deep .hljs-emphasis{font-style:italic}
-::ng-deep .hljs-strong{font-weight:bold}
-::ng-deep .hljs-link{text-decoration:underline}
+::ng-deep.hljs{
+    display:block;
+    overflow-x:auto;
+    padding:0.5em;
+    color:#383a42;
+    background:#fafafa
+}
+::ng-deep.hljs-comment,
+::ng-deep.hljs-quote{
+    color:#a0a1a7;
+    font-style:italic
+}
+::ng-deep.hljs-doctag,
+::ng-deep.hljs-keyword,
+::ng-deep.hljs-formula{
+    color:#a626a4
+}
+::ng-deep.hljs-section,
+::ng-deep.hljs-name,
+::ng-deep.hljs-selector-tag,
+::ng-deep.hljs-deletion,
+::ng-deep.hljs-subst{
+    color:#e45649
+}
+::ng-deep.hljs-literal{
+    color:#0184bb
+}
+::ng-deep.hljs-string,
+::ng-deep.hljs-regexp,
+::ng-deep.hljs-addition,
+::ng-deep.hljs-attribute,
+::ng-deep.hljs-meta-string{
+    color:#50a14f
+}
+::ng-deep.hljs-built_in,
+::ng-deep.hljs-class .hljs-title{
+    color:#c18401
+}
+::ng-deep.hljs-attr,
+::ng-deep.hljs-variable,
+::ng-deep.hljs-template-variable,
+::ng-deep.hljs-type,
+::ng-deep.hljs-selector-class,
+::ng-deep.hljs-selector-attr,
+::ng-deep.hljs-selector-pseudo,
+::ng-deep.hljs-number{
+    color:#986801
+}
+::ng-deep.hljs-symbol,
+::ng-deep.hljs-bullet,
+::ng-deep.hljs-link,
+::ng-deep.hljs-meta,
+::ng-deep.hljs-selector-id,
+::ng-deep.hljs-title{
+    color:#4078f2
+}
+::ng-deep.hljs-emphasis{
+    font-style:italic
+}
+::ng-deep.hljs-strong{
+    font-weight:bold
+}
+::ng-deep.hljs-link{
+    text-decoration:underline
+}

@@ -1,8 +1,6 @@
 <div class="wrapper">
   <app-simple-post *ngFor="let post of postService.timeline" [post]="post"></app-simple-post>
-  <md-card class="more-view">
-    <button *ngIf="isLoading" class="more-button" md-button disabled><md-icon>more_horiz</md-icon></button>
-    <button *ngIf="!isLoading" class="more-button" md-button (click)="getMorePosts()">더 보기</button>
-  </md-card>
-  <md-progress-bar *ngIf="isLoading" mode="indeterminate"></md-progress-bar>
+  <button *ngIf="isLoading" class="more-button" md-button disabled><md-icon>more_horiz</md-icon></button>
+  <button *ngIf="!isLoading" class="more-button" md-raised-button (click)="getMorePosts()">더 보기</button>
 </div>
+<md-progress-bar *ngIf="isLoading" mode="indeterminate"></md-progress-bar>

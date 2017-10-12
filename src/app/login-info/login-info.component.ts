@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { AuthService } from '../blog.service';
+import { API_URL, AuthService } from '../blog.service';
 
 import { User } from '../blog.model';
 
@@ -12,21 +12,11 @@ import { User } from '../blog.model';
 
 export class LoginInfoComponent implements OnInit {
 
-  loginUser: User = new User();
-
+  private apiUrl: string = API_URL;
   @Output() onLogout: EventEmitter<undefined> = new EventEmitter();
 
   constructor(private authService: AuthService) { }
 
-  ngOnInit(): void {
-    this.authService
-      .getMe()
-      .then(user => {
-        this.loginUser = new User(user);
-      })
-      .catch(err => {
-        this.loginUser = new User();
-      });
-  }
+  ngOnInit(): void { }
 
 }

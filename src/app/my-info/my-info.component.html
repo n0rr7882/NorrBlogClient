@@ -1,0 +1,13 @@
+<md-tab-group>
+  <md-tab label="계정 정보">
+    <div class="wrapper">
+      <app-account-info *ngIf="authService.isLogin()" [user]="authService.loginedUser"></app-account-info>
+      <md-spinner *ngIf="!authService.isLogin()"></md-spinner>
+    </div>
+  </md-tab>
+  <md-tab label="정보 수정">
+    <div class="wrapper">
+      <md-spinner></md-spinner>
+    </div>
+  </md-tab>
+</md-tab-group>

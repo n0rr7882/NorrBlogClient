@@ -1,0 +1,8 @@
+.wrapper {
+    margin: 0 auto;
+    max-width: 768px;
+}
+
+md-spinner {
+     padding: calc(50% - 50px); 
+}
